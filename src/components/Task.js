@@ -1,6 +1,12 @@
 import React from "react";
 
-function Task({text, category, handleDeleteClick}) {
+function Task({text, category, handleDeleteTask}) {
+  function handleDeleteClick() {
+    /* CALLBACK THAT UPDATES TASK STATE. */
+    handleDeleteTask(text);
+  }
+
+
   return (
     <div className="task">
       {/* <div className="label">CATEGORY HERE</div>
